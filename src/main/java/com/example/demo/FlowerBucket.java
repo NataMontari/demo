@@ -1,12 +1,12 @@
-package flower.store;
+package com.example.demo;
 import java.util.List;
 import java.util.ArrayList;
 import lombok.Getter;
 
 @Getter
-public class FlowerBucket {
+public class FlowerBucket extends Item{
     private List<FlowerPack> bucket = new ArrayList<FlowerPack>();
-    private int bucketPrice;
+    private double price;
     public FlowerBucket(List<FlowerPack> bucket) {
         this.bucket = bucket;
     }
@@ -16,11 +16,11 @@ public class FlowerBucket {
     public void addFlowerPack(FlowerPack pack) {
         bucket.add(pack);
     }
-    public double getBucketPrice() {
-        double price = 0;
+    public double getPrice() {
+        double bucketPrice = 0;
         for (FlowerPack pack: this.bucket) {
-            price += pack.getPrice();
+            bucketPrice += pack.getPrice();
         }
-        return price;
+        return bucketPrice;
     }
 }
