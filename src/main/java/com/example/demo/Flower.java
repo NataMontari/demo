@@ -20,6 +20,7 @@ public class Flower extends Item{
     private FlowerColor color;
     private double price;
     private FlowerType flowerType;
+    private String description;
 
     public String getColor() {
         return color.toString();

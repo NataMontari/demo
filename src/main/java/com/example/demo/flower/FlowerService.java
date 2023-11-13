@@ -19,7 +19,7 @@ import com.example.demo.FlowerType;
 @Service
 public class FlowerService{
     public List<Flower> getFlowers(){
-        return List.of(new Flower(1, 10.5, FlowerColor.BLACK, 100, FlowerType.CHAMOMILE));
+        return List.of(new Flower(1, 10.5, FlowerColor.BLACK, 100, FlowerType.CHAMOMILE, "Black Chamomile flower"));
     }
     
 //     private FlowerRepository flowerRepository;
