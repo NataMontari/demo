@@ -7,6 +7,7 @@ import lombok.Getter;
 public class FlowerBucket extends Item{
     private List<FlowerPack> bucket = new ArrayList<FlowerPack>();
     private double price;
+    public String description = "This is the flower bucket";
     public FlowerBucket(List<FlowerPack> bucket) {
         this.bucket = bucket;
     }
@@ -22,5 +23,8 @@ public class FlowerBucket extends Item{
             bucketPrice += pack.getPrice();
         }
         return bucketPrice;
+    }
+    public String getDescription(){
+        return description;
     }
 }
